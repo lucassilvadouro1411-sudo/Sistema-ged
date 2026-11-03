@@ -1,35 +1,43 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#0b1020">
-<meta name="description" content="Página oficial de informações e downloads do DOXEVRA SOURCE GUARD.">
-<title>DOXEVRA SOURCE GUARD — Downloads</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080d18">
+<meta name="description" content="Central oficial de downloads do DOXEVRA SOURCE GUARD para Windows.">
+<title>DOXEVRA SOURCE GUARD | Downloads</title>
 <style>
-:root{color-scheme:dark;--bg:#080d18;--panel:#101a2c;--line:#24344d;--text:#edf3ff;--muted:#a9b8ce;--blue:#69a7ff;--warn:#f2c879}
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% -20%,#1d3760 0,transparent 55%),var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,Segoe UI,sans-serif}
-main{width:min(900px,calc(100% - 32px));margin:72px auto}.eyebrow{color:var(--blue);font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase}
-h1{font-size:clamp(34px,7vw,58px);line-height:1.05;letter-spacing:-.04em;margin:14px 0}p{color:var(--muted)}.panel{margin-top:30px;padding:28px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,#121e33,#0d1525);box-shadow:0 24px 80px #0005}
-.status{display:inline-block;border:1px solid #765d2b;background:#3c2e16;color:var(--warn);border-radius:99px;padding:5px 12px;font-size:12px;font-weight:700}
-a.cta{display:inline-block;margin-top:12px;padding:12px 18px;border-radius:10px;background:var(--blue);color:#071326;text-decoration:none;font-weight:800}
-a{color:#9dc4ff}h2{font-size:20px;margin:0 0 8px}.small{font-size:13px}.foot{margin-top:32px;font-size:13px}
+:root{color-scheme:dark;--bg:#080d18;--panel:#111c2d;--line:#293b56;--text:#edf3ff;--muted:#aab8cc;--blue:#75adff;--amber:#f3c879;--green:#8bd8b0}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% -20%,#1c365d 0,transparent 55%),var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,Segoe UI,sans-serif}
+main{width:min(920px,calc(100% - 32px));margin:64px auto}.eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);font-weight:800}
+h1{font-size:clamp(36px,7vw,62px);line-height:1.03;letter-spacing:-.045em;margin:16px 0}h2{font-size:21px;margin:0 0 10px}p{color:var(--muted)}.panel{margin-top:24px;padding:26px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,#142139,#0e1727);box-shadow:0 24px 80px #0005}
+.status{display:inline-block;border:1px solid #725b2c;background:#3c3019;color:var(--amber);border-radius:99px;padding:5px 12px;font-size:12px;font-weight:800}
+a{color:#a8cbff}.cta{display:inline-block;margin:12px 0;padding:13px 19px;border-radius:10px;background:var(--blue);color:#071326;text-decoration:none;font-weight:800}
+ul{color:var(--muted);padding-left:21px}.small{font-size:13px}.ok{color:var(--green)}.foot{font-size:13px;margin:30px 0}
 </style></head>
 <body><main>
-<div class="eyebrow">Central oficial de downloads</div>
+<div class="eyebrow">Central oficial · Windows</div>
 <h1>DOXEVRA<br>SOURCE GUARD</h1>
-<p>Informações do projeto e distribuição de versões para Windows.</p>
+<p>Gestão documental, verificação de integridade e rastreabilidade local.</p>
 <section class="panel">
-<span class="status">VERSÃO DE TESTE — NÃO ESTÁVEL</span>
-<h2 style="margin-top:18px">Pacote Windows</h2>
-<p>Foi gerado um artefato de aproximadamente 2,18 MB. A execução mais recente do processo de compilação terminou com falha; por isso, o pacote ainda não foi validado como versão estável.</p>
-<a class="cta" href="https://github.com/lucassilvadouro1411-sudo/ff-panel/actions/runs/41549442465">Ver artefato de teste no GitHub</a>
-<p class="small">O repositório de origem é privado. O GitHub pode exigir autenticação e permissão para baixar esse artefato. Este link ainda não é um download público aberto.</p>
+<span class="status">PACOTE DE TESTE — NÃO É RELEASE ESTÁVEL</span>
+<h2 style="margin-top:17px">DOXEVRA Source Guard para Windows</h2>
+<p>O pipeline executou com sucesso os testes automatizados, a compilação WPF e o empacotamento. A etapa que falhou foi somente a configuração automática do GitHub Pages. O pacote foi gerado, mas ainda não passou por validação de instalação em máquinas Windows independentes.</p>
+<a class="cta" href="https://github.com/lucassilvadouro1411-sudo/ff-panel/actions/runs/41549442465">Acessar pacote de teste no GitHub Actions</a>
+<p class="small">O repositório de origem é privado. O GitHub exige autenticação e permissão de acesso para baixar esse artefato; portanto, este botão não é um download público aberto.</p>
 </section>
 <section class="panel">
-<h2>Publicação definitiva</h2>
-<p>O download público será disponibilizado aqui após corrigir a falha do CI, testar a instalação no Windows e publicar o binário em uma Release deste repositório.</p>
-<p><a href="https://github.com/lucassilvadouro1411-sudo/ff-panel">Repositório privado de desenvolvimento</a></p>
+<h2>Conteúdo do pacote</h2>
+<ul><li>Executável WPF: DOXEVRA.SourceGuard.exe</li><li>Biblioteca SQLite e componentes nativos x86/x64</li><li>Arquivos de configuração e símbolos de depuração</li></ul>
+<p><strong>Requisito:</strong> Windows com .NET Framework 4.8 instalado. O pacote atual não é um instalador MSI e não inclui instalador automático do .NET Framework.</p>
 </section>
-<p class="foot">DOXEVRA SOURCE GUARD · Página de distribuição e informações</p>
+<section class="panel">
+<h2>Recursos e limitações</h2>
+<ul><li>Verificação de integridade SHA-256 e manifesto JSON.</li><li>Catálogo documental local e armazenamento SQLite.</li><li>Contas locais e perfis de acesso.</li><li>OCR depende do Tesseract e dos idiomas instalados.</li><li>Digitalização depende de scanner e driver WIA compatível.</li><li>Assinatura ECDSA local protegida por DPAPI; não substitui certificado ICP-Brasil.</li><li>Git nesta versão oferece leitura de status e histórico.</li><li>Não há sincronização multiestação nem backup automático.</li></ul>
+</section>
+<section class="panel">
+<h2>Distribuição pública</h2>
+<p>Para disponibilizar um download aberto, o pacote precisa ser publicado como Release neste repositório público. A conexão atual permite atualizar os arquivos da página, mas não enviar binários como assets de Release. Até essa publicação, o artefato permanece no repositório privado de desenvolvimento.</p>
+<p><a href="https://github.com/lucassilvadouro1411-sudo/Sistema-ged">Repositório público desta página</a> · <a href="https://github.com/lucassilvadouro1411-sudo/ff-panel">Repositório privado de desenvolvimento</a></p>
+</section>
+<p class="foot">DOXEVRA SOURCE GUARD · Página de distribuição</p>
 </main></body></html>
