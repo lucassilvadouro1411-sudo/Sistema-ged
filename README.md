@@ -1,34 +1,51 @@
 # DOXEVRA SOURCE GUARD — Downloads
 
-Página pública do projeto DOXEVRA SOURCE GUARD.
+Portal público de informações e distribuição do **DOXEVRA SOURCE GUARD** para Windows.
 
-> **Situação do instalador:** existe um artefato Windows gerado pelo GitHub Actions, mas o fluxo de compilação mais recente terminou com falha. Por isso, ele ainda não está marcado como versão estável nem foi publicado como download público.
+## Pacote de teste disponível
 
-## Download de teste (acesso restrito)
+O pipeline do repositório privado executou com sucesso as etapas de testes automatizados, compilação WPF e empacotamento. A configuração automática do GitHub Pages foi a etapa que falhou. Portanto, existe um pacote de teste, mas ele ainda não foi validado como versão estável em máquinas Windows independentes.
 
-O pacote de teste está anexado à execução abaixo:
+- [Abrir a execução do Windows Build e seus artefatos](https://github.com/lucassilvadouro1411-sudo/ff-panel/actions/runs/41549442465)
+- Artefato: `doxevra-source-guard-windows`
+- Tamanho aproximado: 2,18 MB
 
-- [Abrir execução e artefatos do Windows](https://github.com/lucassilvadouro1411-sudo/ff-panel/actions/runs/41549442465)
+**Acesso restrito:** o repositório de origem `ff-panel` é privado. O GitHub exige uma conta com permissão para baixar esse artefato. Este endereço não é um download público anônimo.
 
-Artefato: `doxevra-source-guard-windows` (aprox. 2,18 MB).
+## Requisitos do pacote atual
 
-**Atenção:** o repositório de origem `ff-panel` é privado. Portanto, o GitHub pode exigir que você esteja autenticado e tenha permissão para acessar o artefato. Esse link ainda não é um download público para qualquer pessoa.
+- Windows compatível com .NET Framework 4.8.
+- O pacote atual é um ZIP com executável e dependências SQLite, não um instalador MSI.
+- OCR requer Tesseract e pacotes de idioma instalados.
+- Digitalização requer scanner e driver WIA compatível.
 
-## Projeto
+## Recursos presentes no código
 
-- Nome: DOXEVRA SOURCE GUARD
-- Plataforma pretendida: Windows
-- Repositório de origem: privado, para proteger o código-fonte
-- Este repositório: página pública de informações e downloads
+- Verificação de integridade SHA-256 e manifesto JSON.
+- Catálogo documental e persistência SQLite.
+- Contas locais e perfis de acesso.
+- Versionamento local.
+- Assinatura ECDSA com chave protegida pelo DPAPI do Windows.
+- Adaptador OCR para Tesseract.
+- Digitalização via WIA.
+- Leitura de status e histórico Git.
+- Testes automatizados no pipeline Windows.
 
-## Como instalar quando houver uma versão pública
+## Limitações conhecidas
 
-1. Baixe o instalador/arquivo publicado na seção **Releases**.
-2. Extraia o pacote, se necessário.
-3. Execute o instalador e siga as instruções exibidas.
-4. Se o Windows mostrar um aviso de segurança, confira a origem e a assinatura do arquivo antes de continuar.
+- Não há sincronização multiestação nem backup automático.
+- Git é somente leitura nesta etapa.
+- A assinatura local não equivale a certificado ICP-Brasil.
+- OCR e scanners dependem de componentes externos.
+- A compatibilidade e o processo de instalação ainda precisam ser validados em máquinas independentes.
+- Não há uma Release pública com binário neste repositório.
 
-## Transparência
+## Publicação pública
 
-Não considere o artefato atual uma versão estável: a execução de CI mais recente está marcada como **falha**, apesar de ter produzido um artefato. Uma publicação pública definitiva depende de corrigir a falha, validar a instalação em Windows e publicar o binário em uma Release deste repositório.
+A página HTML está em [index.html](index.html). O código-fonte continua no repositório privado [ff-panel](https://github.com/lucassilvadouro1411-sudo/ff-panel), preservando sua privacidade.
 
+Para que qualquer pessoa baixe o executável diretamente, o ZIP precisa ser publicado como asset de uma Release deste repositório público. A conexão atual consegue editar arquivos de texto, mas não disponibiliza a operação de upload de binários para Releases.
+
+## Estado
+
+Este projeto ainda não deve ser anunciado como sistema completo ou versão estável. A página informa o que foi gerado, quais etapas passaram e quais validações continuam pendentes.
