@@ -1,51 +1,43 @@
-# DOXEVRA SOURCE GUARD — Downloads
+# DOXEVRA GED ENTERPRISE
 
-Portal público de informações e distribuição do **DOXEVRA SOURCE GUARD** para Windows.
+Site institucional e demonstração web do projeto DOXEVRA.
 
-## Pacote de teste disponível
+## Publicação web
+- Página: `index.html`
+- Deploy: GitHub Actions em `.github/workflows/pages.yml`
+- Branch de produção: `main`
 
-O pipeline do repositório privado executou com sucesso as etapas de testes automatizados, compilação WPF e empacotamento. A configuração automática do GitHub Pages foi a etapa que falhou. Portanto, existe um pacote de teste, mas ele ainda não foi validado como versão estável em máquinas Windows independentes.
+A URL esperada do GitHub Pages é:
+https://lucassilvadouro1411-sudo.github.io/Sistema-ged/
 
-- [Abrir a execução do Windows Build e seus artefatos](https://github.com/lucassilvadouro1411-sudo/ff-panel/actions/runs/41549442465)
-- Artefato: `doxevra-source-guard-windows`
-- Tamanho aproximado: 2,18 MB
+O workflow de deploy foi adicionado. A publicação depende de GitHub Pages estar habilitado nas configurações do repositório. Não foi possível habilitar a configuração de Pages pela integração disponível nesta sessão.
 
-**Acesso restrito:** o repositório de origem `ff-panel` é privado. O GitHub exige uma conta com permissão para baixar esse artefato. Este endereço não é um download público anônimo.
+## Funcionalidades desta página
+- Site responsivo em português brasileiro.
+- Tema claro/escuro.
+- Simulador visual de famílias de scanners (não detecta hardware real).
+- Seções de GED, OCR, captura, segurança e segmentos.
+- Calculadora estimativa de ROI.
+- Apresentação de planos sem preços publicados.
+- FAQ e prévia visual do portal do cliente.
 
-## Requisitos do pacote atual
+## Limites desta entrega
+Esta é uma página estática. Não contém backend nem serviços de produção para autenticação, clientes, licenças, máquinas, faturas, pagamentos, chamados, API, OCR remoto ou armazenamento em nuvem. Não inserir credenciais ou dados pessoais no portal demonstrativo.
 
-- Windows compatível com .NET Framework 4.8.
-- O pacote atual é um ZIP com executável e dependências SQLite, não um instalador MSI.
-- OCR requer Tesseract e pacotes de idioma instalados.
-- Digitalização requer scanner e driver WIA compatível.
+A compatibilidade WIA/TWAIN, o OCR e qualquer assinatura ICP-Brasil precisam ser implementados e testados no aplicativo Windows. O simulador web não representa conexão real a scanners.
 
-## Recursos presentes no código
+## Aplicativo Windows
+O código do aplicativo está no repositório privado:
+https://github.com/lucassilvadouro1411-sudo/ff-panel
 
-- Verificação de integridade SHA-256 e manifesto JSON.
-- Catálogo documental e persistência SQLite.
-- Contas locais e perfis de acesso.
-- Versionamento local.
-- Assinatura ECDSA com chave protegida pelo DPAPI do Windows.
-- Adaptador OCR para Tesseract.
-- Digitalização via WIA.
-- Leitura de status e histórico Git.
-- Testes automatizados no pipeline Windows.
+O README desse projeto descreve a fundação C#/WPF e as funcionalidades ainda pendentes. O artefato de teste do GitHub Actions exige acesso ao repositório privado e ainda não é uma Release pública estável:
+https://github.com/lucassilvadouro1411-sudo/ff-panel/actions/runs/41549442465
 
-## Limitações conhecidas
-
-- Não há sincronização multiestação nem backup automático.
-- Git é somente leitura nesta etapa.
-- A assinatura local não equivale a certificado ICP-Brasil.
-- OCR e scanners dependem de componentes externos.
-- A compatibilidade e o processo de instalação ainda precisam ser validados em máquinas independentes.
-- Não há uma Release pública com binário neste repositório.
-
-## Publicação pública
-
-A página HTML está em [index.html](index.html). O código-fonte continua no repositório privado [ff-panel](https://github.com/lucassilvadouro1411-sudo/ff-panel), preservando sua privacidade.
-
-Para que qualquer pessoa baixe o executável diretamente, o ZIP precisa ser publicado como asset de uma Release deste repositório público. A conexão atual consegue editar arquivos de texto, mas não disponibiliza a operação de upload de binários para Releases.
-
-## Estado
-
-Este projeto ainda não deve ser anunciado como sistema completo ou versão estável. A página informa o que foi gerado, quais etapas passaram e quais validações continuam pendentes.
+## Próximas etapas para uma edição SaaS de produção
+1. Backend hospedado e banco de dados gerenciado.
+2. Autenticação segura, recuperação de conta e RBAC.
+3. Serviço de licenças e ativação de máquinas.
+4. Checkout e faturamento com provedor de pagamentos.
+5. API de suporte e upload seguro de laudos.
+6. Publicação pública do instalador assinado após testes independentes.
+7. Política de privacidade, termos, retenção e plano de resposta a incidentes.
